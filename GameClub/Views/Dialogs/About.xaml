@@ -1,0 +1,43 @@
+﻿<Window x:Class="GameClub.Views.Dialogs.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="About" Height="400" Width="600"
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
+         Background="Transparent"
+        ResizeMode="NoResize" AllowsTransparency="True" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="20" BorderThickness="1" BorderBrush="White">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#000000" Offset="1"/>
+                <GradientStop Color="#1C1C1C" Offset="0.1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <TextBlock Text="О программе:" 
+                   HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" TextWrapping="Wrap"
+                   FontSize="30" Foreground="White"/>
+            <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,70,10,0">
+                <TextBlock Text="Версия: GameClub 1.0" 
+                   TextWrapping="Wrap"  
+                   FontSize="20" Foreground="White"/>
+                <TextBlock Margin="0,10,0,0" Text="Разработал: учащийся группы 45 ТП Соловьёв Евгений" 
+                   TextWrapping="Wrap" 
+                   FontSize="20" Foreground="White"/>
+                <TextBlock Margin="0,10,0,0" Text="Цель: данное приложение было разработано для дипломного проекта МГКЦТ." 
+                   TextWrapping="Wrap" 
+                   FontSize="20" Foreground="White"/>
+                <TextBlock Margin="0,10,0,0" Text="Назначение: данный программный продукт предназначен для автоматизации работы компьютерного клуба." 
+                   TextWrapping="Wrap" 
+                   FontSize="20" Foreground="White"/>
+                <TextBlock  Margin="0,10,0,0" Text="Год разработки: 2023." 
+                   TextWrapping="Wrap" 
+                   FontSize="20" Foreground="White"/>
+            </StackPanel>
+            
+            <Button Click="Button_Click" VerticalAlignment="Bottom"  Width="130" Margin="0,0,0,20" Content="Закрыть"  Style="{StaticResource ButtonStyle}"/>
+        </Grid>
+    </Border>
+</Window>

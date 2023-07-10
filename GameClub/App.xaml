@@ -1,0 +1,37 @@
+﻿<Application x:Class="GameClub.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GameClub"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             StartupUri="Views/LoginView.xaml">
+             <!--StartupUri="Views/UserPages/BookPlaceView.xaml">-->
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesign:BundledTheme BaseTheme="Dark"  PrimaryColor="Blue" SecondaryColor="Blue"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="Styles/NavigationButtons.xaml" />
+                <ResourceDictionary Source="Styles/Text_Style.xaml" />
+                <ResourceDictionary Source="Styles/Button_Style.xaml" />
+                <ResourceDictionary Source="Styles/Image_Style.xaml" />
+                <ResourceDictionary Source="Styles/Page.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="FontFamily" Value="Helvetica" />
+                <Setter Property="FontWeight" Value="Light"/>
+                <Setter Property="Foreground" Value="White"/>
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="Helvetica" />
+                <Setter Property="FontWeight" Value="Light"/>
+                <Setter Property="Foreground" Value="White"/>
+            </Style>
+       
+            <Style x:Key="CustomFont">
+                <Setter Property="TextElement.FontFamily" Value="/fonts/#Nightmare Pills"></Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

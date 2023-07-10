@@ -1,0 +1,64 @@
+﻿<Window x:Class="GameClub.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodels ="clr-namespace:GameClub.ViewModels"
+        xmlns:heleprs="clr-namespace:GameClub.Helpers"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        FontSize="18" FontFamily="{DynamicResource MaterialDesignFont}" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent" 
+        mc:Ignorable="d" Height="500" Width="400">
+    <Window.DataContext>
+        <viewmodels:LoginViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <heleprs:MyConverter x:Key="mConv"></heleprs:MyConverter>
+        <heleprs:NoQuotesConverter x:Key="conv"></heleprs:NoQuotesConverter>
+    </Window.Resources>
+
+    <Border MouseLeftButtonDown="Grid_MouseLeftButtonDown"
+          MouseLeftButtonUp="Grid_MouseLeftButtonUp"
+          MouseMove="Grid_MouseMove" BorderBrush="White" BorderThickness="1" CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#000000" Offset="1"/>
+                <GradientStop Color="#1C1C1C" Offset="0.1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Image VerticalAlignment="Top" Margin="0,30,10,0" Width="250" HorizontalAlignment="Center"   Source="/Images/Logo.png"/>
+            <Button Command="{Binding CloseCommand}" Style="{StaticResource ExitApp}"/>
+            <Button Command="{Binding OpenConnectionView}" Background="Transparent" BorderBrush="Transparent" Width="30" Height="30" Margin="170,0,0,200"/>
+            <StackPanel VerticalAlignment="Center" Margin="0 100 0 0">
+                <TextBox Width="270"  materialDesign:ValidationAssist.HasError="True" 
+                         BorderThickness="0 0 0 1.5" Foreground="White" 
+                         materialDesign:HintAssist.FloatingOffset="0,-20" 
+                         materialDesign:HintAssist.Hint="Логин" FontSize="20"
+                         materialDesign:ValidationAssist.Background="Black" 
+                         Text="{Binding Username, Converter={StaticResource conv}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="IBeam" />
+                <PasswordBox Width="270" Name="txtPassword" FontSize="20"  BorderThickness="0 0 0 1.5" Foreground="White" materialDesign:HintAssist.FloatingOffset="0,-18" materialDesign:HintAssist.Hint="Пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <StackPanel Margin="0,40,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button Margin="0,0,0,0" 
+                              Command="{Binding Path=LoginCommand}" Width="120" Height="50" materialDesign:ButtonAssist.CornerRadius="22" Content="Вход"   
+                             Style="{StaticResource ButtonStyle}" Cursor="Hand" FontSize="18">
+                        <Button.CommandParameter>
+                            <MultiBinding Converter="{StaticResource mConv}">
+                                <Binding ElementName="txtPassword"/>
+                                <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}"/>
+                            </MultiBinding>
+                        </Button.CommandParameter>
+                    </Button>
+                    <Button Command="{Binding GoToRegCommand}"   materialDesign:ButtonAssist.CornerRadius="22" 
+                                CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" 
+                                Content="Регистрация" Margin="30,0,0,0"  Width="130" Height="50" FontSize="18"
+                                Style="{StaticResource  ButtonStyle}" Cursor="Hand"  />
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+    </Border>
+
+</Window>

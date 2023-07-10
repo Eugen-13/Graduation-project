@@ -1,0 +1,82 @@
+﻿<Page x:Class="GameClub.Views.UserPages.CurrentSessionView"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GameClub.Views.UserPages"
+      xmlns:viewmodels ="clr-namespace:GameClub.ViewModels.UserPages"
+      xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      xmlns:i ="http://schemas.microsoft.com/xaml/behaviors"
+      Height="750" Width="800"
+      Title="ProfileUserView" Style="{StaticResource Page_Style}">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}"  CommandParameter="{Binding ElementName=dataGrid}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Page.DataContext>
+        <viewmodels:CurrentSessionViewModel/>
+    </Page.DataContext>
+
+    <Border BorderBrush="White" BorderThickness="1" Background="#FF121212" Padding="30" CornerRadius="30"  Margin="0,0,0,100" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid Background="Transparent">
+            <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                <Label Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="30" Content="Текущая сессия"></Label>
+                <Label HorizontalAlignment="Center" FontSize="20" FontStyle="Italic"  Content="{Binding Time}"></Label>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,20" Grid.Row="0">
+                            <Label Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Цена (1 час): "/>
+                            <TextBox FontSize="20"  Foreground="White" IsReadOnly="True" HorizontalContentAlignment="Left" Margin="5,0,0,0" Text="{Binding FixPrice}" VerticalAlignment="Center" Width="200" Cursor="Hand"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="0">
+                            <Label Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Полная стоимость: "/>
+                            <TextBox FontSize="20"  IsReadOnly="True"  HorizontalContentAlignment="Left" Foreground="White"  Margin="5,0,0,0" Text="{Binding Book.Price}"  VerticalAlignment="Center" Width="150" Cursor="IBeam"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,20,0,20" Grid.Row="0">
+                            <Label Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Дата:"/>
+                            <TextBox FontSize="20" HorizontalContentAlignment="Left" Foreground="White"  IsReadOnly="True" Margin="5,0,0,0" Text="{Binding Book.Start_Date, Mode=OneWay}" VerticalAlignment="Center" Width="100" Cursor="IBeam"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="30,0,0,0">
+                      
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,20" Grid.Row="0">
+                            <Label Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Время начала:  "/>
+                            <TextBox FontSize="20" Foreground="White" IsReadOnly="True" HorizontalContentAlignment="Left" Margin="5,0,0,0" Text="{Binding Book.Start_Time, Mode=OneWay}" VerticalAlignment="Center" Width="230" Cursor="Hand"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="0">
+                            <Label Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Время окончания: "/>
+                            <TextBox FontSize="20"  IsReadOnly="True"  HorizontalContentAlignment="Left" Foreground="White"  Margin="5,0,0,0" Text="{Binding Book.End_Time, Mode=OneWay}"  VerticalAlignment="Center" Width="200" Cursor="IBeam"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,20,0,20" Grid.Row="0">
+                    <Label Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Код места: "/>
+                    <TextBox FontSize="20" Foreground="White" IsReadOnly="True" HorizontalContentAlignment="Left" Margin="5,0,0,0" Text="{Binding Place.Id}" VerticalAlignment="Center" Width="100" Cursor="IBeam"/>
+                    <Label Margin="150,0,0,0" Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Категория: "/>
+                    <TextBox FontSize="20" Foreground="White" IsReadOnly="True" HorizontalContentAlignment="Left" Margin="5,0,0,0" Text="{Binding Place.Category}" VerticalAlignment="Center" Width="200" Cursor="IBeam"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,20" Grid.Row="0">
+                    <Label Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Описание: "/>
+                    <TextBox FontSize="20" Foreground="White" IsReadOnly="True" HorizontalContentAlignment="Left" Margin="5,0,0,0" Text="{Binding Place.Description}" VerticalAlignment="Center" Width="560" Cursor="IBeam"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,20" Grid.Row="0">
+                    <Label Foreground="White" VerticalAlignment="Center" FontSize="20" Content="Характеристика: "/>
+                    <TextBox FontSize="20" HorizontalContentAlignment="Left" TextWrapping="Wrap" Foreground="White" IsReadOnly="True" Margin="5,0,0,0" Text="{Binding  Place.Performance}" VerticalAlignment="Center" Width="510" Cursor="IBeam"/>
+                </StackPanel>
+          
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Command="{Binding ExtendSession}" Content="Продлить" 
+                            Style="{StaticResource ButtonStyle}"/>
+                    <Button Margin="30,0,0,0"  Command="{Binding CancelSession}" Content="Отменить бронь" 
+                            Style="{StaticResource ButtonStyle}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Page>

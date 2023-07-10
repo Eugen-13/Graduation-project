@@ -1,0 +1,59 @@
+﻿<Window x:Class="GameClub.Views.UserPages.ViewSelectedPlaceView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:userPages="clr-namespace:GameClub.ViewModels.UserPages"
+        xmlns:local="Views.UserPages"  ResizeMode="NoResize"   
+        xmlns:viewmodels = "clr-namespace:GameClub.ViewModels.AdminPages"
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent" 
+        mc:Ignorable="d" Title="BookPlace" Height="350" Width="600">
+    
+    <Border CornerRadius="30" BorderThickness="1" BorderBrush="White">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#000000" Offset="1"/>
+                <GradientStop Color="#1C1C1C" Offset="0.1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid Background="Transparent">
+            <TextBlock HorizontalAlignment="Center" Margin="20,10,0,0" FontSize="25" Foreground="White" Text="Игровое место"/>
+            <StackPanel Orientation="Vertical"  Margin="20,60,0,0">
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center">
+                    <Image MinHeight="150" MaxHeight="150" VerticalAlignment="Center" MaxWidth="150" MinWidth="150" Source="{Binding Place.Image}"/>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="20,0,0,0">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,00" Grid.Row="0">
+                            <Label Foreground="White" VerticalAlignment="Center" FontSize="15" Content="Описание: "/>
+                            <TextBox Foreground="White" TextWrapping="Wrap" IsReadOnly="True" HorizontalContentAlignment="Left" Margin="5,0,0,0" Text="{Binding Place.Description, Mode=TwoWay}" VerticalAlignment="Center" Width="300" Cursor="IBeam"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,20,0,20" Grid.Row="0">
+                            <Label Foreground="White" VerticalAlignment="Center" FontSize="15" Content="Категория: "/>
+                            <TextBox Foreground="White" IsReadOnly="True" TextWrapping="Wrap" HorizontalContentAlignment="Left" Margin="5,0,0,0" Text="{Binding Place.Category, Mode=TwoWay}" VerticalAlignment="Center" Width="300" Cursor="IBeam"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,00,0,20" Grid.Row="0">
+                            <Label Foreground="White" VerticalAlignment="Center" FontSize="15" Content="Цена: "/>
+                            <TextBox Foreground="White" IsReadOnly="True" TextWrapping="Wrap" HorizontalContentAlignment="Left" Margin="5,0,0,0" Text="{Binding Place.Price, Mode=TwoWay}" VerticalAlignment="Center" Width="330" Cursor="IBeam"/>
+                        </StackPanel>
+                    </StackPanel>
+                   
+                    
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,20" Grid.Row="0">
+                    <Label Foreground="White" VerticalAlignment="Center" FontSize="15" Content="Характеристики: "/>
+                    <TextBox HorizontalContentAlignment="Left" TextWrapping="Wrap" Foreground="White" IsReadOnly="True" Margin="5,0,0,0" Text="{Binding Place.Performance, Mode=TwoWay}" VerticalAlignment="Center" Width="420" Cursor="IBeam"/>
+                </StackPanel>
+               
+               
+                <StackPanel Margin="0,0,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Command="{Binding OkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" 
+                            Content="Забронировать" Style="{StaticResource ButtonStyle}"/>
+                    <Button Margin="50,0,0,0" Command="{Binding CancelCommand}"
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" Content="Закрыть"
+                           Style="{StaticResource ButtonStyle}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+ </Window>

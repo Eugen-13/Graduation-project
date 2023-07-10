@@ -1,0 +1,44 @@
+﻿<Window x:Class="GameClub.Views.UserPages.CancelBookView"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:userPages="clr-namespace:GameClub.ViewModels.UserPages"
+        xmlns:local="Views.UserPages"  ResizeMode="NoResize"     
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"  
+        mc:Ignorable="d" Title="BookPlace" Height="250" Width="600" Background="Transparent">
+    <Border CornerRadius="30" BorderThickness="1" BorderBrush="White">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#1C1C1C" Offset="0.0"/>
+                <GradientStop Color="#000000" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid Background="Transparent">
+            <StackPanel  Orientation="Vertical" HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center"  Margin="0,20,0,0" Foreground="White" FontSize="25">Вы уверены что хотите закончить сеанс? </TextBlock>
+                <TextBlock  Foreground="White" FontSize="18" FontStyle="Italic">Учтите что ближайшие пол часа войдут в стоймость оплаты.</TextBlock>
+                <StackPanel Margin="0,20,0,0" Orientation="Vertical">
+                    <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="30" Content="Итог: "/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Label Foreground="White" FontSize="20" Content="Количество часов: "/>
+                        <Label Foreground="White" FontStyle="Oblique" FontSize="20" Content="{Binding Hours, Mode=OneWay}"/>
+                        <Label Foreground="White" FontStyle="Oblique" FontSize="20" Content="ч."/>
+                        <Label Margin="50,0,0,0" Foreground="White" FontSize="20" Content="Цена: "/>
+                        <Label Foreground="White" FontStyle="Oblique" FontSize="20" Content="{Binding Price, Mode=OneWay}"/>
+                    </StackPanel>
+                
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Margin="0,0,0,20" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Button Command="{Binding OkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                        Content="Да" Style="{StaticResource ButtonStyle}" Width="100"/>
+                <Button Margin="50,0,0,0" Command="{Binding CancelCommand}" Width="120" 
+                        CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" Content="Нет" 
+                        Style="{StaticResource ButtonStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

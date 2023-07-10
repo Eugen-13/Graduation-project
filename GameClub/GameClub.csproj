@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="123.chm" />
+    <None Remove="fonts\NightmarePills-BV2w.ttf" />
+    <None Remove="Images\Avatar.png" />
+    <None Remove="Images\booking.png" />
+    <None Remove="Images\cash.png" />
+    <None Remove="Images\categories.png" />
+    <None Remove="Images\computer.png" />
+    <None Remove="Images\Logo.png" />
+    <None Remove="Images\map.png" />
+    <None Remove="Images\payment.png" />
+    <None Remove="Images\pc.png" />
+    <None Remove="Images\purchase.png" />
+    <None Remove="Images\shop.png" />
+    <None Remove="Images\shutdown_def.png" />
+    <None Remove="Images\shutdown_mo.png" />
+    <None Remove="Images\time.png" />
+    <None Remove="Images\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiveCharts" Version="0.9.7" />
+    <PackageReference Include="LiveCharts.Core" Version="0.9.8" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.9" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.5" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    <PackageReference Include="MySql.Data" Version="8.0.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="fonts\NightmarePills-BV2w.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Avatar.png" />
+    <Resource Include="Images\booking.png" />
+    <Resource Include="Images\cash.png" />
+    <Resource Include="Images\categories.png" />
+    <Resource Include="Images\computer.png" />
+    <Resource Include="Images\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\map.png" />
+    <Resource Include="Images\payment.png" />
+    <Resource Include="Images\pc.png" />
+    <Resource Include="Images\purchase.png" />
+    <Resource Include="Images\shop.png" />
+    <Resource Include="Images\shutdown_def.png" />
+    <Resource Include="Images\shutdown_mo.png" />
+    <Resource Include="Images\time.png" />
+    <Resource Include="Images\user.png" />
+  </ItemGroup>
+
+</Project>

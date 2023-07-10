@@ -1,0 +1,118 @@
+﻿<Window x:Class="GameClub.Views.AdminView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameClub.Views"
+        xmlns:Menu ="clr-namespace:GameClub.CustomControls"
+        xmlns:viewmodel ="clr-namespace:GameClub.ViewModels" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
+        mc:Ignorable="d" Background="Transparent"
+        Title="MainView" Height="750" Width="1200">
+    <Border  BorderBrush="White" BorderThickness="1" CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#1C1C1C" Offset="0.0"/>
+                <GradientStop Color="#000000" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin="10,10,10,0">
+                <Border Padding="0,10" CornerRadius="20">
+                    <Image VerticalAlignment="Top" Margin="0,0,30,0" Width="150" HorizontalAlignment="Center"   Source="/Images/Logo.png"/>
+                </Border>
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding GoToPagePayment}"
+                              IsChecked="True">
+                    <Grid>
+                        <Image Source="/Images/cash.png"
+                                   Style="{StaticResource Image_Style}" />
+                        <TextBlock Text="Касса"
+                                       Style="{StaticResource Text_Style}" />
+                    </Grid>
+                </Menu:Btn>
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding GoToPageUsers}">
+                    <Grid>
+                        <Image Source="/Images/user.png"
+                                   Style="{StaticResource Image_Style}" />
+                        <TextBlock Text="Пользователи" 
+                                       Style="{StaticResource Text_Style}" />
+                    </Grid>
+                </Menu:Btn>
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding GoToPagePlaces}">
+                    <Grid>
+                        <Image Source="/Images/computer.png"
+                                   Style="{StaticResource Image_Style}" />
+                        <TextBlock Text="Места"
+                                       Style="{StaticResource Text_Style}" />
+                    </Grid>
+                </Menu:Btn>
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding GoToPageClubMap}">
+                    <Grid>
+                        <Image Source="/Images/map.png"
+                                   Style="{StaticResource Image_Style}" />
+                        <TextBlock Text="Карта клуба"
+                                       Style="{StaticResource Text_Style}" />
+                    </Grid>
+                </Menu:Btn>
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding GoToPageCategoryes}">
+                    <Grid>
+                        <Image Source="/Images/categories.png"
+                                   Style="{StaticResource Image_Style}" />
+                        <TextBlock Text="Категории"
+                                       Style="{StaticResource Text_Style}" />
+                    </Grid>
+                </Menu:Btn>
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding GoToPageBooks}">
+                    <Grid>
+                        <Image Source="/Images/booking.png"
+                                   Style="{StaticResource Image_Style}" />
+                        <TextBlock Text="Бронирование"
+                                       Style="{StaticResource Text_Style}" />
+                    </Grid>
+                </Menu:Btn>
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding GoToPageShop}">
+                    <Grid>
+                        <Image Source="/Images/shop.png"
+                                   Style="{StaticResource Image_Style}" />
+                        <TextBlock Text="Магазин"
+                                       Style="{StaticResource Text_Style}" />
+                    </Grid>
+                </Menu:Btn>
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding GoToPagePaymentHistory}">
+                    <Grid>
+                        <Image Source="/Images/payment.png"
+                                   Style="{StaticResource Image_Style}" />
+                        <TextBlock Text="История оплаты"
+                                       Style="{StaticResource Text_Style}" />
+                    </Grid>
+                </Menu:Btn>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Bottom" Margin="10,0,10,20" Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <Button Background="#FF121212" Width="150"
+                            HorizontalAlignment="Left" BorderBrush="White" Command="{Binding OpenAbout}"   Content="О программе" Height="40" Style="{StaticResource MaterialDesignOutlinedButton}" FontSize="16"  Foreground="White"  Cursor="Hand"/>
+                    <Button Margin="10,0,0,0" Background="#FF121212" 
+                            BorderBrush="White"  Width="119" HorizontalAlignment="Left" Command="{Binding OpenHelp}"   Content="Справка" Height="40" Style="{StaticResource MaterialDesignOutlinedButton}" FontSize="16"  Foreground="White"  Cursor="Hand"/>
+                </StackPanel>
+                <Button Margin="0,10,0,0" Background="#FF121212" Command="{Binding ChangeAccountCommand}" BorderBrush="White"  CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" Content="Сменить аккаунт" Height="40" Style="{StaticResource MaterialDesignOutlinedButton}" FontSize="16"  Foreground="White"  Cursor="Hand"/>
+            </StackPanel>
+            <Frame Content="{Binding SelectedPage}" NavigationUIVisibility="Hidden" Margin="0,40,0,0" Grid.Column="1"/>
+            <Button Command="{Binding CloseCommand}" Margin="0,0,5,0" Grid.Column="1" Style="{StaticResource ExitApp}"/>
+        </Grid>
+ 
+    </Border>
+
+</Window>
+<!--#FF0E0E10--> 

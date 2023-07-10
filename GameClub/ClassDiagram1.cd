@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="GameClub.Helpers.HelpMethods">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAIAAAIAAAAAACAAAAABAAAAAAAA=</HashCode>
+      <FileName>Helpers\HelpMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.Helpers.LocalStorage">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAQQAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\LocalStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.Helpers.MyConverter">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\MyConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.Models.BookModel">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAiAAAQAQIAAAAAAAACAAgAIAAiAAAAEAAAAEAABAA=</HashCode>
+      <FileName>Models\BookModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.Models.CategoryModel">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CategoryModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.Models.PayModel">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAgAQAgAAAAAAAAAAwAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PayModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.Models.PlaceModel">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQCgAAAAAAAAAAAAAAAAABAAAAQAAAAACAA=</HashCode>
+      <FileName>Models\PlaceModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.Models.UserModel" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAABAAAAQAAAAQAAAAAQBACAAAAAAAAAAg=</HashCode>
+      <FileName>Models\UserModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.Models.PurchaseModel">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAAAIAAAAAQAgAAAQBAAAACAAAAgAAA=</HashCode>
+      <FileName>Models\PurchaseModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.Repositories.BookRepository">
+    <Position X="9" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAEAAAAgARAAAAAIAAAgAEAAAAAA=</HashCode>
+      <FileName>Repositories\BookRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.Repositories.CategoryRepository">
+    <Position X="7.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACYAAAAAAAAAAAAAACAAAQAAAAgAAAAAAAA=</HashCode>
+      <FileName>Repositories\CategoryRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.Repositories.PayRepository">
+    <Position X="16" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAgCAAAAAAA=</HashCode>
+      <FileName>Repositories\PayRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.Repositories.PlaceRepository">
+    <Position X="16" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAIAAAEQAAAAAAABAAAAAigACAAAAAk=</HashCode>
+      <FileName>Repositories\PlaceRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.Repositories.PurchaseRepository">
+    <Position X="12.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAABAAAAAAAAAAAgAgAEAEIA=</HashCode>
+      <FileName>Repositories\PurchaseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.Repositories.RepositoryBase">
+    <Position X="7.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAgAAAAAAAAAAAAEAAAAAAAAAJAAAAABBAAAA=</HashCode>
+      <FileName>Repositories\RepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.Repositories.UserRepository">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAAACBCAAAAAAAAAAAggIAAgAoAAAAAQ=</HashCode>
+      <FileName>Repositories\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.Places.AddCategoryViewModel">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAIAAAAAAAQAAUAAAAEAAAAAAAAAAIAAAAAgAACAA=</HashCode>
+      <FileName>ViewModels\AdminPages\AddCategoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.AddUserViewModel">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAoAAAACAAAAAMASFAEAQAAAAAAAAKAAIAAoAAAEE=</HashCode>
+      <FileName>ViewModels\AdminPages\AddUserViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.DBBooksViewModel">
+    <Position X="24.75" Y="8.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GameClub.ViewModels.AdminPages.DBBooksViewModel.ObservableCollectionPropertyNotify&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\AdminPages\DBBooksViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAACAACAABAAAAAAASAQAAAgAAIABCAgAAAAAAhkAQ=</HashCode>
+      <FileName>ViewModels\AdminPages\DBBooksViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.DBCategoriesViewModel">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAKAACAABASAEGAASAAAAAACAIEREAgAAAAAAggAQ=</HashCode>
+      <FileName>ViewModels\AdminPages\DBCategoriesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.DBPlacesViewModel">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GameClub.ViewModels.AdminPages.DBPlacesViewModel.ObservableCollectionPropertyNotify&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\AdminPages\DBPlacesViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BEQECAACAABAQAECAACAQIAAAjAIABEAoEAAAAAgkAA=</HashCode>
+      <FileName>ViewModels\AdminPages\DBPlacesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.DBUsersViewModel">
+    <Position X="26.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACCACAABAQAECAASAAAAAACAIABUAgIAAAIRggAQ=</HashCode>
+      <FileName>ViewModels\AdminPages\DBUsersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.EditOrAddPurchaseViewModel">
+    <Position X="9" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAAIAAAAYBgBAEEAAAAAAQAAAgAQBCAAECAAAAEAAA=</HashCode>
+      <FileName>ViewModels\AdminPages\EditOrAddPurchaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.ExtendSessionViewModel">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wgACIACAAQAQQQAEAEgAEAIEAAggAASIAAAAAAAACAA=</HashCode>
+      <FileName>ViewModels\AdminPages\ExtendSessionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.PaymentHistoryViewModel">
+    <Position X="14.25" Y="6.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GameClub.ViewModels.AdminPages.PaymentHistoryViewModel.ObservableCollectionPropertyNotify&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\AdminPages\PaymentHistoryViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAICAACAABCAAAAAASACAAAAAAIABAAgAAAAAAggAQ=</HashCode>
+      <FileName>ViewModels\AdminPages\PaymentHistoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.ShopViewModel">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACCACAABAQAECAACAAAAAADgIABEAgAAAAAAggAA=</HashCode>
+      <FileName>ViewModels\AdminPages\ShopViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.UserPages.BookPlaceViewModel">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgACIAAAAQASQAAEAGgAEAIEAAgAAACIAACAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserPages\BookPlaceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.UserPages.CancelBookViewModel">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAACAAQAQAAAEAEAAEAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserPages\CancelBookViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.UserPages.DBPlacesViewModel">
+    <Position X="19.5" Y="5.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GameClub.ViewModels.UserPages.DBPlacesViewModel.ObservableCollectionPropertyNotify&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\UserPages\DBPlacesViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAACAACAABAAAAAAECAAAAAAhAIEBAEgEBAAAAggAA=</HashCode>
+      <FileName>ViewModels\UserPages\DBPlacesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.UserPages.ProfileUserViewModel">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQDIAAAACBABAAEASEAAAQAAAAAQBCCAEIAAIAEAAk=</HashCode>
+      <FileName>ViewModels\UserPages\ProfileUserViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.UserPages.ShopViewModel">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACCACAABCQAACAECgAAAAATgIABGAgAAAIAAggAA=</HashCode>
+      <FileName>ViewModels\UserPages\ShopViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.UserPages.UserBooksViewModel">
+    <Position X="10.75" Y="3" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GameClub.ViewModels.UserPages.UserBooksViewModel.ObservableCollectionPropertyNotify&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\UserPages\UserBooksViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAACAACAABAAAAAAASAQAAAgAAIABCAgAAAAAAhkAQ=</HashCode>
+      <FileName>ViewModels\UserPages\UserBooksViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.UserPages.UserPaymentHistoryViewModel">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GameClub.ViewModels.UserPages.UserPaymentHistoryViewModel.ObservableCollectionPropertyNotify&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\UserPages\UserPaymentHistoryViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAICAACAABCAAAAAASASAAAAAAIABAAgAAAAAAggAQ=</HashCode>
+      <FileName>ViewModels\UserPages\UserPaymentHistoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminViewModel">
+    <Position X="23" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBAAAGAIAAAAAAEAAAgBAJAQAAAAAYARBAhEIDWCAA=</HashCode>
+      <FileName>ViewModels\AdminViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.LoginViewModel">
+    <Position X="17.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAAAAAQQAEAAAAAAAAAAAAAAIAIICAAAA=</HashCode>
+      <FileName>ViewModels\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.RegistrationViewModel">
+    <Position X="12.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAoAAQACgAEAAABSEgAAQAAgAAAAQAAAIACIJgAAk=</HashCode>
+      <FileName>ViewModels\RegistrationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.UserViewModel">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBFAAAEAIEAgACAFAIAgAAJAQgAAAAQgQAAAEIBWAQA=</HashCode>
+      <FileName>ViewModels\UserViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.ViewModelBase">
+    <Position X="21.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAIAAAAEAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.ViewModels.ViewModelBaseDataGrid&lt;T&gt;">
+    <Position X="14.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBaseDataGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameClub.ViewModels.ViewModelCommand">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameClub.ViewModels.AdminPages.PaymentViewModel">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="GameClub.ViewModels.AdminPages.PaymentViewModel.ObservableCollectionPropertyNotify&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\AdminPages\PaymentViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QQAQAAAAAABCAEAEAAgAAAAAQAABABAAAAAAAAAAAAg=</HashCode>
+      <FileName>ViewModels\AdminPages\PaymentViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="GameClub.Repositories.ISelectable&lt;T&gt;">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Repositories\ISelectable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

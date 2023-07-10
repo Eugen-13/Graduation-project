@@ -1,0 +1,83 @@
+﻿<Window x:Class="GameClub.Views.AdminPages.EditMapView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:adminPages="clr-namespace:GameClub.ViewModels.AdminPages"
+        xmlns:local="Views.UserPages"  ResizeMode="NoResize"     
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"  
+        mc:Ignorable="d" Title="BookPlace" Height="360" Width="400" Background="Transparent">
+
+    <Window.DataContext>
+        <adminPages:EditMapViewModel/>
+    </Window.DataContext>
+    
+    <Border CornerRadius="30" BorderThickness="1"  BorderBrush="White">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#000000" Offset="1"/>
+                <GradientStop Color="#1C1C1C" Offset="0.1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Margin="0,10,0,0"  Orientation="Vertical" HorizontalAlignment="Center">
+                <Label Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Content="Кординаты: "/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30" Grid.Row="0">
+                    <Label Foreground="White" VerticalAlignment="Center" FontSize="15" Content="X: "/>
+                    <TextBox Foreground="White" IsReadOnly="True" FontSize="15" HorizontalContentAlignment="Center" Margin="5,0,0,0" Text="{Binding Model.PosX, Mode=OneWay}" VerticalAlignment="Center" Width="50" Cursor="IBeam"/>
+                    <Label Foreground="White" Margin="60,0,0,0" VerticalAlignment="Center" FontSize="15" Content="Y: "/>
+                    <TextBox Foreground="White" IsReadOnly="True" FontSize="15" HorizontalContentAlignment="Center" Margin="5,0,0,0" Text="{Binding Model.PosY, Mode=OneWay}" VerticalAlignment="Center" Width="50" Cursor="IBeam"/>
+                </StackPanel>
+                <Button Visibility="{Binding visibility}" Command="{Binding DeleteCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" Content="Удалить точку" Style="{StaticResource ButtonStyle}"/>
+                <Label Foreground="White" Margin="0,10,0,0" FontSize="20" Content="Выберите содержание: " HorizontalAlignment="Center"/>
+                <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center"  Orientation="Horizontal">
+                    <RadioButton x:Name="r1" IsChecked="{Binding IsText}" Foreground="White" FontSize="20" Content="Текст"/>
+                    <RadioButton x:Name="r2" IsChecked="{Binding IsPC}" Margin="100,0,0,0" FontSize="20" Foreground="White" Content="Место"/>
+                </StackPanel>
+                <TextBox Foreground="White" Margin="0,20,0,0" x:Name="textBox" Text="{Binding Text, Mode=TwoWay}" FontSize="25" Width="150">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignTextBox}">
+                            <Setter Property="Visibility"  Value="Visible"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=r1, Path=IsChecked}" Value="True">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=r1, Path=IsChecked}" Value="False">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+                <ComboBox ItemsSource="{Binding Fields}" SelectedItem="{Binding SelectedValue}" Foreground="White" Margin="0,20,0,0" x:Name="comboBox" FontSize="20" Width="200">
+                    <ComboBox.Style>
+                        <Style TargetType="ComboBox" BasedOn="{StaticResource MaterialDesignComboBox }">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=r2, Path=IsChecked}" Value="True">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=r2, Path=IsChecked}" Value="False">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ComboBox.Style>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Grid.RowSpan="2" Margin="0,0,0,20" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Button Command="{Binding SaveChangesCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" 
+                        Content="Сохранить" Style="{StaticResource ButtonStyle}"/>
+                <Button Margin="20,0,0,0" Command="{Binding CancelChangesCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                        Content="Отмена" Style="{StaticResource ButtonStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
